@@ -1,0 +1,28 @@
+
+plugins {
+    id 'java'
+    id 'application'
+}
+
+group = 'registration'
+version = '1.0'
+
+repositories {
+    mavenCentral()
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(17)
+    }
+}
+
+application {
+    mainClass = 'registration.Main'
+}
+
+tasks.named('run') {
+    standardInput = System.in
+}
+
+
